@@ -1,0 +1,60 @@
+.note {
+  padding: 1em 1em 1.5em;
+  height: auto;
+  margin: auto;
+  margin-bottom: 16px;
+  width: 60%;
+  background: #eed;
+  border-radius: 10px;
+  box-shadow: 0 4px 40px rgba(3, 41, 61, 0.05);
+  opacity: 1;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn ease-in;
+  animation-fill-mode: forwards;
+  animation-duration: 0.1s;
+}
+
+.note p {
+  display: block;
+  margin: 0em;
+  font-size: 1.4em;
+  color: #222;
+  font-family: "Poppins", sans-serif;
+}
+
+.closebtn {
+  color: #aa9;
+  font-weight: bold;
+  float: right;
+  cursor: pointer;
+  font-size: 1.3em;
+}
+.closebtn:hover {
+  color: #ac2500;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.8;
+  }
+}
+@keyframes fadeOut {
+  from {
+    opacity: 0.8;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 991px) {
+  .note {
+    width: -webkit-fill-available;
+    margin: 0em 1em 1em;
+  }
+}

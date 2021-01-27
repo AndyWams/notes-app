@@ -1,38 +1,62 @@
-.App {
+html {
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  min-height: 100%;
+  background: linear-gradient(-45deg, rgba(0, 0, 0, 0.3), rgba(0, 40, 105, 0.8)),
+    url("./assets/img/nature.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.main {
+  height: 100vh;
+}
+.notes__wrapper {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  height: 100%;
+}
+.notes__header header {
+  padding: 1em 0em 1em;
+  position: fixed;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header h1 {
+  color: #f4b350;
+  margin: 0em;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+header h1 span {
+  display: block;
+  font-size: 13px;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.notes__content {
+  padding-top: 24px;
+  display: flex;
+  flex: 1 1 85%;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: flex-start;
+  overflow: auto;
+  font-family: "Poppins", sans-serif;
+  margin-top: 8em;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.notes__footer footer {
+  display: flex;
+  flex: 1 1 5%;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1em 0em;
+}
+@media screen and (min-width: 320px) and (max-width: 991px) {
+  .notes__footer footer {
+    padding: 1em;
   }
 }
